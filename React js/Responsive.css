@@ -1,0 +1,33 @@
+@media (max-width: 480px) {
+  .bala {
+    color: red;
+  }
+
+  .paiin {
+    color: chartreuse;
+  }
+}
+
+@media (min-width: 480px) {
+  .bala {
+    color: aqua;
+  }
+
+  .paiin {
+    color: blue;
+  }
+}
+
+/* </head >
+
+        <body>
+
+            <h3 class="bala">bala</h3>
+
+            <p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is "lightblue", otherwise it is "lightgreen".</p>
+
+            <h3 class="paiin">paiin</h3>
+
+        </body>
+
+</html > */
