@@ -2,11 +2,11 @@
 import OtherComponent from './OtherComponent';
 
 function MyComponent() {
-    return (
-        <div>
-            <OtherComponent />
-        </div>
-    );
+  return (
+    <div>
+      <OtherComponent />
+    </div>
+  );
 }
 
 // with lazy
@@ -15,14 +15,14 @@ const OtherComponent = lazy(() => import('./OtherComponent'));
 const AnotherComponent = lazy(() => import('./AnotherComponent'))
 
 function MyComponent() {
-    return (
-        <div>
-            <Suspense fallback={<div>Loading...</div>}>
-                <OtherComponent />
-                <AnotherComponent />
-            </Suspense>
-        </div>
-    );
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+        <AnotherComponent />
+      </Suspense>
+    </div>
+  );
 }
 
 // وقتی که یک کاربر صحفه وبی را باز می کند، تمام محتوا به صورت یک جا بارگزاری می شود . بعضی از قسمت های محتوا اصلا کاربر به آن نیازی ندارد و به همین دلیل ، چرا چیز با ارزشی مثل وقت و یا پهنای باند و منابع را بیهوده هدر دهیم

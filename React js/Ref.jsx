@@ -1,22 +1,19 @@
 // به مقادیر یک المنت دسترسی داشته باشیم
 
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from "react";
 
 function Ref() {
+  const inputRef = useRef();
 
-    const inputRef = useRef()
+  useEffect(() => {
+    inputRef.current.focus();
+  });
 
-    useEffect(() => {
-        inputRef.current.focus()
-    })
-
-
-    return (
-        <div>
-            <input type='text' ref={inputRef} />
-        </div>
-    )
+  return (
+    <div>
+      <input type="text" ref={inputRef} />
+    </div>
+  );
 }
 
-export default Ref
-
+export default Ref;
