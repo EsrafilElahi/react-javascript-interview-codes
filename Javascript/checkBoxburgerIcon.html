@@ -1,123 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>checkbox</title>
-</head>
+  </head>
 
-<style>
-
+  <style>
     /* body style */
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 5rem 0;
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 0;
     }
 
     /* container */
-    .container{
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+    .container {
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
     }
 
     /* checkbox style */
-    .checkbox-label{
-        width :53px;
-        height: 25px;
-        background: rgb(197, 160, 157);
-        border-radius: 20px;
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        transition: .3s ease
+    .checkbox-label {
+      width: 53px;
+      height: 25px;
+      background: rgb(197, 160, 157);
+      border-radius: 20px;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
-    .checkbox-label::after{
-        content: '';
-        width: 20px;
-        height: 21px;
-        border-radius: 50%;
-        background: rgb(212, 44, 44);
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        transition: .3s ease
+    .checkbox-label::after {
+      content: "";
+      width: 20px;
+      height: 21px;
+      border-radius: 50%;
+      background: rgb(212, 44, 44);
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: 0.3s ease;
     }
-    input[type='checkbox']{
-        display: none;
+    input[type="checkbox"] {
+      display: none;
     }
-    input[type='checkbox']:checked + .checkbox-label{
-        background: rgba(169, 221, 162, 0.651);
+    input[type="checkbox"]:checked + .checkbox-label {
+      background: rgba(169, 221, 162, 0.651);
     }
-    input[type='checkbox']:checked + .checkbox-label::after{
-        background: rgb(29, 241, 1);
-        transform: translateX(29px)
+    input[type="checkbox"]:checked + .checkbox-label::after {
+      background: rgb(29, 241, 1);
+      transform: translateX(29px);
     }
 
     /* burger icon style */
-    .burger-icon-container{
-        display: block;
-        cursor: pointer;
+    .burger-icon-container {
+      display: block;
+      cursor: pointer;
     }
-    .burger-icon div{
-        width: 20px;
-        height: 3px;
-        background: rgb(241, 238, 55);
-        margin: 3px 0;
-        border-radius: 10px;
-        transition: all 0.2s ease;
+    .burger-icon div {
+      width: 20px;
+      height: 3px;
+      background: rgb(241, 238, 55);
+      margin: 3px 0;
+      border-radius: 10px;
+      transition: all 0.2s ease;
     }
-    .burger-icon-container.open div:nth-child(1){
-        transform: rotate(-30deg);
-        transform-origin: 80% 0%;
+    .burger-icon-container.open div:nth-child(1) {
+      transform: rotate(-30deg);
+      transform-origin: 80% 0%;
     }
-    .burger-icon-container.open div:nth-child(2){
-        background: transparent;
-        transform: translateX(-30px)
+    .burger-icon-container.open div:nth-child(2) {
+      background: transparent;
+      transform: translateX(-30px);
     }
-    .burger-icon-container.open div:nth-child(3){
-        transform: rotate(80deg);
-        transform-origin: 80% -50%;
+    .burger-icon-container.open div:nth-child(3) {
+      transform: rotate(80deg);
+      transform-origin: 80% -50%;
     }
+  </style>
 
-
-
-</style>
-
-<body>
-
+  <body>
     <div>
-        <h3>customize checkbox input & burger icon</h3>
+      <h3>customize checkbox input & burger icon</h3>
     </div>
 
     <div class="container">
-        <div class="check-box-container">
-            <input id='check' type='checkbox' />
-            <label for='check' class="checkbox-label"></label>
-        </div>
+      <div class="check-box-container">
+        <input id="check" type="checkbox" />
+        <label for="check" class="checkbox-label"></label>
+      </div>
 
-        <div class="burger-icon-container">
-            <div class="burger-icon">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+      <div class="burger-icon-container">
+        <div class="burger-icon">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
+      </div>
     </div>
 
     <script>
-        const icon = document.querySelector('.burger-icon-container')
-        icon.addEventListener('click', function () {
-            icon.classList.toggle('open')
-        })
+      const icon = document.querySelector(".burger-icon-container");
+      icon.addEventListener("click", function () {
+        icon.classList.toggle("open");
+      });
     </script>
-
-</body>
-
+  </body>
 </html>

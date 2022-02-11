@@ -1,18 +1,15 @@
 // first-class entity
 
 const hello = () => {
-    console.log('hello f-c')
-}
+  console.log("hello f-c");
+};
 
 function say(handler) {
-    handler()
+  handler();
 
-    return function () {
-        console.log('goodbye f-c')
-    }
+  return function () {
+    console.log("goodbye f-c");
+  };
 }
 
-console.log(say(hello)())
-
-
-
+console.log(say(hello)());

@@ -1,16 +1,16 @@
-const num = [1, 2, 3, 4]
+const num = [1, 2, 3, 4];
 
-const [a, b, ...rest] = num
+const [a, b, ...rest] = num;
 
-console.log(a, b, rest)
+console.log(a, b, rest);
 
 // ============================
 
 const user = {
-    name: 'eliot',
-    age: 23
-}
+  name: "eliot",
+  age: 23,
+};
 
-const {name} = user
+const { name } = user;
 
-console.log(name)
+console.log(name);

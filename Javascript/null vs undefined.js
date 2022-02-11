@@ -1,16 +1,16 @@
-const user = {}
-console.log(user.name) // undefined
+const user = {};
+console.log(user.name); // undefined
 
 let x;
-console.log(x) // undefined
+console.log(x); // undefined
 
 function person() {
-    // no return
+  // no return
 }
-console.log(person()) // undefined
+console.log(person()); // undefined
 
-nul == undefined // true
-nul === undefined // false
+nul == undefined; // true
+nul === undefined; // false
 
-console.log(typeof undefined) // undefined
-console.log(typeof null) // object
+console.log(typeof undefined); // undefined
+console.log(typeof null); // object

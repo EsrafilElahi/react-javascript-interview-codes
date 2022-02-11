@@ -1,16 +1,16 @@
 function download(url, callback) {
-    setTimeout(() => {
-        console.log(`downloading ${url}`)
+  setTimeout(() => {
+    console.log(`downloading ${url}`);
 
-        callback(url)
-    }, 3000);
+    callback(url);
+  }, 3000);
 }
 
 function process(pic) {
-    console.log(`process ${pic}`)
+  console.log(`process ${pic}`);
 }
 
-let url = 'https://javascripttutorial.net/pic.png'
+let url = "https://javascripttutorial.net/pic.png";
 
 download(url, process);
 
@@ -18,5 +18,5 @@ download(url, process);
 // after that process
 
 // callback hamoon async/await ast
-// vaghti az callback function estefade mikonim 
+// vaghti az callback function estefade mikonim
 // yani inke be tartib saf anjam bede , yani oon time ezafi ro sabr kon
