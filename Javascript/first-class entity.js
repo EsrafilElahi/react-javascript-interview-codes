@@ -1,5 +1,4 @@
 // first-class entity
-
 const hello = () => {
   console.log("hello f-c");
 };

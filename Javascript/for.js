@@ -14,8 +14,9 @@ for (const key in obj) {
   console.log(obj[key]); //value
 }
 
+
 // for of  --> return item
 const num = [0, 7, 4, 9, 2];
-for (const item of numb) {
+for (const item of num) {
   console.log(item);
 }
