@@ -1,0 +1,11 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    pink 0%,
+    pink 50%,
+    aqua 50%,
+    aqua 100%
+  )
+}
