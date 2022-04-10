@@ -20,11 +20,24 @@ handlePromis
 
 // another promise example
 
-const p = Promise.resolve("hello");
+const res = Promise.resolve("hello");
 
-p.then((val) => {
-  console.log(val);
-  return `${val} world`;
-}).then((newVal) => {
-  console.log(newVal);
-});
+res
+  .then((val) => {
+    console.log(val);
+    return `${val} world`;
+  })
+  .then((newVal) => {
+    console.log(newVal);
+  });
+
+const rej = Promise.reject("hello");
+
+rej
+  .catch((val) => {
+    console.log(val);
+    return Promise.reject(`${val} world`);
+  })
+  .catch((newVal) => {
+    console.log(newVal);
+  });
