@@ -41,3 +41,24 @@ rej
   .catch((newVal) => {
     console.log(newVal);
   });
+
+// another promise example
+
+const prom = new Promise((resolve, reject) => {
+  if (true) {
+    reject(new Error("rejected!"));
+  } else {
+    resolve("resolved!");
+  }
+});
+
+prom
+  .then((val) => {
+    return Promise.resolve(`${val} we did it!`);
+  })
+  .then((val) => {
+    console.log(`got ${val}`);
+  })
+  .catch((err) => {
+    console.log(`err msg : ${err.message}`);
+  });
