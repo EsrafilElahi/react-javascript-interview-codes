@@ -69,20 +69,25 @@ let uniqueObj1 = [
   ...new Map(arrObj.map((item) => [item["name"], item])).values(),
 ];
 
+// good with reduce
+let uniqueObj2 = [
+  arrObj.sort((a, b) => a.age - b.age).reduce((acc, val) => ({ ...acc, [val.name]: val }), {}),
+];
+
+
 // groupBy --> age
 let aged = [];
 let flag = {};
 
-arrObj
-  .sort((a, b) => a.age - b.age)
-  .map((item) => {
-    if (item.age === flag) {
-      //     console.log('hast');
-    } else {
-      aged.push(item);
-      flag = item.age;
-    }
-  });
+arrObj.sort((a, b) => a.age - b.age).map((item) => {
+  if (item.age === flag) {
+    // console.log('hast');
+    return;
+  } else {
+    aged.push(item);
+    flag = item.age;
+  }
+});
 
 // groupBy --> name
 let named = [];

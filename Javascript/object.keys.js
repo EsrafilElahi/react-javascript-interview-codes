@@ -23,5 +23,5 @@ for (const [key, value] of Object.entries(object1)) {
 function devide(weight) {
   let w1 = [...Array(weight).keys()];
   // let w1 = Array.from(Array(weight).keys());
-  console.log(arrayWeight)
+  console.log(w1)
 }
