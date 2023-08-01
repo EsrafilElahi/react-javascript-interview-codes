@@ -1,0 +1,26 @@
+attention web vitals
+use Next Image
+use zustand and implement "Hydration"
+for slider and carousel use "Keen Slider"
+multi zone for separate several apps
+next.config.js {
+  config --> minimum CacheTTL on Images
+  security headers
+}
+
+use sentry for monitoring and error tracking
+main page ---> ISR
+if you use SSR then use ssr-caching
+first image loaded ---> must be "priority"
+for Link default has prefetch=true ---> create custom linke component and make it prefetch=false
+use shallow routing for doesn't need make SSR or SSG
+for CSR use SWR
+use custom logger
+
+dynamic import SVG icons
+keep small return() method in pages and components
+if section of page doesn't need to be SSR--> make it dynamic import and { ssr: false }
+handleError in SSR, SSG, ... like try/catch
+use Headers vs Cookie in SSR
+use font loader in nextjs
+static pages like about-us policy and ... must be SSG
