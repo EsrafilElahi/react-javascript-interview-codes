@@ -27,7 +27,7 @@ var name = "David";
 var person = {
   name: "John",
   getName: function () {
-    alert(this.name);
+    console.log(this.name);
   },
 };
 var getName = person.getName;
@@ -43,7 +43,7 @@ const person = {
 const personA = {
   name: "John Doe",
 };
-alert(person.getName.apply(personA));
+console.log(person.getName.apply(personA));
 
 // =====================================
 ("use strict");

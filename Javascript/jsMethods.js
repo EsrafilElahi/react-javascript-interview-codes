@@ -71,23 +71,26 @@ let uniqueObj1 = [
 
 // good with reduce
 let uniqueObj2 = [
-  arrObj.sort((a, b) => a.age - b.age).reduce((acc, val) => ({ ...acc, [val.name]: val }), {}),
+  arrObj
+    .sort((a, b) => a.age - b.age)
+    .reduce((acc, val) => ({ ...acc, [val.name]: val }), {}),
 ];
-
 
 // groupBy --> age
 let aged = [];
-let flag = {};
+let colored = {};
 
-arrObj.sort((a, b) => a.age - b.age).map((item) => {
-  if (item.age === flag) {
-    // console.log('hast');
-    return;
-  } else {
-    aged.push(item);
-    flag = item.age;
-  }
-});
+arrObj
+  .sort((a, b) => a.age - b.age)
+  .map((item) => {
+    if (item.age === colored) {
+      // console.log('hast');
+      return;
+    } else {
+      aged.push(item);
+      colored = item.age;
+    }
+  });
 
 // groupBy --> name
 let named = [];

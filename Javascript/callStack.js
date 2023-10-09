@@ -1,6 +1,6 @@
 // Call Stack = 'run codes here'
 
-// Browser API = 'all async function gos here such as setTimeOut, setInterval, Promis, asyncAwait'
+// Browser API = 'all async function goes here such as setTimeOut, setInterval, Promis, asyncAwait'
 
 // MicroTask Queue = 'setTimeOut , setInterval'
 

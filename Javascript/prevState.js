@@ -6,7 +6,7 @@ const handleClick = () => {
   setNum(num + 1);
 };
 
-const handleClick = () => {
+const handleClick2 = () => {
   setNum((prevState) => prevState + 1);
   setNum((prevState) => prevState + 1); // intori 3ta 3ta ezaf mishe
   setNum((prevState) => prevState + 1);

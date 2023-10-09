@@ -21,3 +21,6 @@ download(url, process);
 // vaghti az callback function estefade mikonim
 // yani inke be tartib saf anjam bede , yani oon time ezafi ro sabr kon
 
+// 1- callback function --> problem : callback hell
+// 2- promise function --> problem : nested then
+// 3- async/await function --> indeal
