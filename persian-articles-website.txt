@@ -1,1 +1,3 @@
 https://amirsalehi.ir/blog/
+https://greenonsoftware.com/articles/integrations/how-to-integrate-state-management-in-zustand-with-nextjs/
+https://greenonsoftware.com/articles/react/common-mistakes-in-using-react-context-api/
