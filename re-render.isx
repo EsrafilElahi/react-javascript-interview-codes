@@ -13,6 +13,7 @@ function App() {
   const memoizeObj = useMemo(() => {
     return obj;
   }, [obj.name]);
+  // [obj] ===> not work
 
   return (
     <div>
