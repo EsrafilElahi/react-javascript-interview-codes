@@ -1,0 +1,46 @@
+avoid re-render child component : 
+
+// App.jsx
+import React, { useMemo, useState } from "react";
+import Test from "./Test";
+
+function App() {
+  const [obj, setObj] = useState({ name: "esrafil" });
+
+  console.log("App re-render");
+
+  // the first way to avoid re-render ==> React.memo
+  const memoizeObj = useMemo(() => {
+    return obj;
+  }, [obj.name]);
+
+  return (
+    <div>
+      <button onClick={() => setObj({ name: "elahi" })}>change name</button>
+      <span>{obj.name}</span>
+      <Test data={memoizeObj} />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+// Test.jsx (Child component)
+import React from "react";
+
+// the second way to avoid re-render ==> with React.memo
+const checkMemo = (prev, next) => {
+  console.log({ prev: prev?.data?.name, next: next?.data?.name });
+
+  return prev?.data?.name !== next.data?.name;
+};
+
+const Test = ({ data }) => {
+  console.log("Test Component re-render");
+
+  return <div>{data.name}</div>;
+};
+
+export default React.memo(Test, checkMemo);
